@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生成绩管理系统</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css"/>
+
+</head>
+
+<body>
+    <div class="header">
+        <span class="left">系 统 管 理 员 人 员 变 动</span>
+        <span class="right">你 好，{{user_info}}管 理 员!</span>
+        <span class="right_right"><a href="/">退出登陆</a></span>
+    </div>
+    <div class="leftside">
+        <ul>
+            <li><a href="/student">学生信息录入</a></li>
+            <li><a href ="/updata_student">学生信息修改</a></li>
+            <li><a href="/teacher_class">老师开设课程查看</a></li>
+            <li><a href="/teacher">选课信息录入</a></li>
+            <li><a href="/grade">成绩信息录入</a></li>
+            <li><a href="/grade_infos">学生成绩查询</a></li>
+            <li><a href="/graduation">毕业去向</a></li>
+            <li class="first"><a href="#">系统管理员变动</a></li>
+
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <h1 class="sub-header">系 统 管 理 员 变 动 系 统</h1>&nbsp;&nbsp;
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>管理员用户名<span>(限全字母的用户名)</span></th>
+                        <th>管理员密码<span>(限字母和数字组合的密码)</span></th>
+                        <th>选择(增加/修改/删除)管理员</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <form action="" method="post" onsubmit="return handleSubmit()">
+                            <td><input class="long" name="admin_name" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="admin_password"
+                                    type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                            <td><select name="selected_one">
+                                    <option value="增加管理员" selected="selected">增加管理员</option>
+                                    <option value="修改管理员密码">修改管理员密码</option>
+                                    <option value="删除管理员">删除管理员</option>
+                                </select></td>
+                            <td><input class="last" type="submit" value="操作" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="doit"><span>操作结果:{{insert_result}}</span></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <td>管理员用户名</td>
+                        <td>密码</td>
+                    </tr>
+                    {% for result in results %}
+                    <tr>
+                        <td>{{result[1]}}</td>
+                        <td>{{result[2]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

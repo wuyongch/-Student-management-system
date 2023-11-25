@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生成绩管理系统</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css"/>
+
+
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <span class="left">老 师 开 设 课 程 查 看</span>
+        <span class="right">你 好，{{user_info}}管 理 员!</span>
+        <span class="right_right"><a href="/">退出登陆</a></span>
+    </div>
+    <div class="leftside">
+        <ul>
+            <li><a href="/student">学生信息录入</a></li>
+            <li><a href ="/updata_student">学生信息修改</a></li>
+            <li class="first"><a href="#">老师开设课程查看</a></li>
+            <li><a href="/teacher">选课信息录入</a></li>
+            <li><a href="/grade">成绩信息录入</a></li>
+            <li><a href="/grade_infos">学生成绩查看</a></li>
+            <li><a href="/graduation">毕业去向</a></li>
+            <li><a href="/adminstator">系统管理员变动</a></li>
+
+        </ul>
+
+    </div>
+    <div class="container-fluid">
+        <h1 class="sub-header">老 师 开 设 课 程 录 入 系 统</h1>
+        &nbsp;&nbsp;
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>教师名称</th>
+                        <th>开设课程1</th>
+                        <th>开设课程2</th>
+                        <th>开设课程3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <form action="" method="post" onsubmit="return handleSubmit()">
+                            <td><input class="long" name="teacher_id" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="teacher_class_id1" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="teacher_class_id2" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="teacher_class_id3" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="last" type="submit" value="提交" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><span>提交结果:{{insert_result}}</span></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <td>教师名称</td>
+                        <td>开设课程1</td>
+                        <td>开设课程2</td>
+                        <td>开设课程3</td>
+                    </tr>
+                    {% for result in results %}
+                    <tr>
+                        <td>{{result[0]}}</td>
+                        <td>{{result[1]}}</td>
+                        <td>{{result[2]}}</td>
+                        <td>{{result[3]}}</td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

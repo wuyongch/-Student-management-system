@@ -1,0 +1,77 @@
+/* 重置默认样式，确保一致性 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 设置全局字体和背景颜色 */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* 容器样式，水平居中，最大宽度，留有一些内边距 */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 页面标题样式 */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* 表格样式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+/* 表单样式 */
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 768px) {
+  /* 在小屏幕上调整样式，例如堆叠表单字段 */
+  input[type="text"] {
+    width: calc(100% - 20px);
+    margin-right: 0;
+  }
+}

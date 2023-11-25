@@ -1,0 +1,136 @@
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* 使用百分比宽度 */
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 55px;
+}
+
+.left {
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+}
+
+.right {
+    position: absolute;
+    right: 160px;
+}
+
+.right_right {
+    position: absolute;
+    right: 24px;
+}
+
+.leftside {
+    float: left;
+    background-color: rgb(245, 245, 245);
+    width: 100%; /* 使用百分比宽度 */
+}
+
+.leftside ul {
+    height: auto; /* 自适应高度 */
+}
+
+/* 添加媒体查询来适应不同的屏幕尺寸 */
+@media (max-width: 768px) {
+    .leftside {
+        width: 100%; /* 修改为合适的宽度 */
+    }
+}
+
+.leftside .first {
+    background-color: rgb(66, 139, 202);
+    margin-top: 25px;
+}
+
+.leftside .first a {
+    color: white;
+}
+
+
+       /* 左侧导航栏样式 */
+.leftside {
+    float: left;  /* 元素浮动到左侧 */
+    width: 200px; /* 宽度为200像素 */
+    height: 100%; /* 高度占满父容器 */
+}
+
+.leftside ul li {
+    border-bottom: 0.2px solid white;  /* 底部边框，分隔每个列表项 */
+    font-size: 20px;  /* 字体大小 */
+    height: 60px;  /* 列表项高度 */
+    line-height: 60px;  /* 行高，垂直居中文本 */
+    width: 100%;  /* 宽度占满父容器 */
+    text-align: center;  /* 文本居中对齐 */
+}
+
+/* 全局容器样式 */
+.container-fluid {
+    width: 100%;
+    height: 100vh; /* 使用视口高度作为高度 */
+}
+
+/* 表格响应式样式 */
+.table-responsive {
+    margin-top: 10px;
+    overflow-x: auto; /* 添加水平滚动条 */
+}
+/* 斑马纹表格样式 */
+.table-striped {
+    width: 100%; /* 使用百分比宽度 */
+}
+
+/* 表头单元格样式 */
+thead tr th {
+    background-color: white;
+}

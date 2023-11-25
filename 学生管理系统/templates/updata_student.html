@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生成绩管理系统</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css"/>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <span class="left">学 生 信 息 变 动</span>
+        <span class="right">你 好，{{user_info}}管 理 员!</span>
+        <span class="right_right"><a href="/">退出登陆</a></span>
+    </div>
+    <div class="leftside">
+        <ul>
+            <li><a href="/student">学生信息录入</a></li>
+             <li class="first"><a href="#">学生信息变动</a></li>
+            <li><a href="/teacher_class">老师开设课程查看</a></li>
+            <li><a href="/teacher">选课信息录入</a></li>
+            <li><a href="/grade">成绩信息录入</a></li>
+            <li><a href="/grade_infos">学生成绩查询</a></li>
+            <li><a href="/graduation">毕业去向</a></li>
+            <li><a href="/adminstator">系统管理员变动</a></li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <h1 class="sub-header">学 生 信 息 修 改 系 统</h1>&nbsp;&nbsp;
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>*输入学生学号<span>(限全数字的学号)</span></th>
+                        <th>(输入修改后学生班级,如不修改则不填)<span></span></th>
+                        <th>(输入修改后学生姓名,如不修改则不填)<span></span></th>
+                        <th>选择(修改/删除)学生</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <form action="" method="post" onsubmit="return handleSubmit()">
+                            <td><input class="long" name="student_id" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="student_class" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="student_name" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><select name="selected_one">
+                                    <option value="修改学生班级">修改学生班级</option>
+                                    <option value="修改学生姓名">修改学生姓名</option>
+                                    <option value="删除学生 ">删除学生</option>
+                                </select></td>
+                            <td><input class="last" type="submit" value="操作" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><span>操作结果:{{insert_result}}</span></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <td>学号</td>
+                        <td>班级</td>
+                        <td>姓名</td>
+
+                    </tr>
+                    {% for result in results %}
+                    <tr>
+                        <td>{{result[0]}}</td>
+                        <td>{{result[1]}}</td>
+                        <td>{{result[2]}}</td>
+
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+
+</html>

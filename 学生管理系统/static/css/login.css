@@ -1,0 +1,92 @@
+li {
+            list-style: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(../images/鹿.jpg);
+            /* background-image: url(./static/img/1.jpg); */
+            background-repeat: no-repeat;
+            /*这里的100% auto 表示将背景图片的长度100%显示，高度自适应*/
+            background-size: 100% auto;
+        }
+
+        #maxbox {
+            margin: 0 auto;
+            margin-top: 200px;
+            padding: 20px, 50px;
+            /*这里的90表示以不透明度90%显示*/
+            background-color: #00000090;
+            text-align: center;
+            width: 600px;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        #maxbox h1 {
+            padding: 0;
+            padding-top: 60px;
+            color: white;
+            font-size: 30px;
+            padding-bottom: 4px;
+            border-bottom: solid 1px white;
+        }
+
+        #maxbox h2 {
+            font-weight: 700;
+            color: white;
+        }
+
+        #maxbox .inputbox {
+            margin-top: 30px;
+
+        }
+
+        #maxbox .inputText {
+            margin-top: 20px;
+
+        }
+
+        #maxbox .inputText span {
+            color: white;
+            font-size: 18px;
+
+
+        }
+
+        #maxbox .inputText input {
+            border: 0;
+            padding: 6px;
+            border-bottom: 1px solid white;
+            /*这里的00表示不透明度为0，即透明显示*/
+            background-color: #FFFFFF00;
+            color: white;
+        }
+
+        #maxbox .inputbox .inputButton {
+            margin: 0;
+            border: 0;
+            margin-top: 20px;
+            width: 145px;
+            height: 25px;
+            /*给这个按钮变为圆角边角*/
+            border-radius: 25px;
+            color: white;
+            background-color: #3498db;
+        }
+
+        #sign_up {
+            margin-top: 50px;
+            color: white;
+            font-size: 17px;
+        }
+
+        #sign_up a {
+            color: #3498db;
+        }
+
+        .hidden {
+            display: none;
+        }

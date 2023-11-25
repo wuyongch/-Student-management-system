@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>学生成绩管理系统登陆</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css"/>
+
+
+</head>
+
+<body>
+    <div id="maxbox">
+        <h1>学生成绩管理系统</h1>
+        <h2 >请登录</h2>
+        <div class="inputbox">
+            <form name="frm" action="" method="post">
+                <div class="inputText">
+                    <span class="iconfont icon-mine"></span>
+                    <input class="username" type="text" placeholder="用户名" name="user" style="color:while" />
+                </div>
+                <div class="inputText">
+                    <span class="iconfont icon-lock"></span>
+                    <input type="password" placeholder="密码" name="pwd" style="color:white" />
+                    <br>
+                </div>
+                <input class="inputButton" type="submit" value="登 录" />
+            </form>
+
+              <div>{{msg}}</div>
+        </div>
+    </div>
+</body>
+
+</html>
